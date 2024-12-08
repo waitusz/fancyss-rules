@@ -2,7 +2,7 @@ name: Update Fancyss Rules 3.0
 
 on:
   push:
-    branches: ['master']
+    branches: [master]
     paths:
       - '.github/workflows/fancyss-rules-3.0.yml'
       - 'rules/auto_update/*'
@@ -11,13 +11,13 @@ on:
       FORCE_PUSH:
         description: 'Force to push'
         required: true
-        default: 'false'
+        default: true
   schedule:
     - cron: '45 19 * * *'
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
