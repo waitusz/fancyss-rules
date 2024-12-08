@@ -27,6 +27,7 @@ jobs:
           sudo apt-get install moreutils
           cd rules/auto_update
           chmod +x fwlist.py
+          chmod +x update_rules.sh
           bash update_rules.sh
 
       - name: Commit to repo
