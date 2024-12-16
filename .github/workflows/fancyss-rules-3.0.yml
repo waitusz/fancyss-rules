@@ -2,7 +2,7 @@ name: Update Fancyss Rules 3.0
 
 on:
   push:
-    branches: [master]
+    branches: ['3.0']
     paths:
       - '.github/workflows/fancyss-rules-3.0.yml'
       - 'rules/auto_update/*'
@@ -11,13 +11,13 @@ on:
       FORCE_PUSH:
         description: 'Force to push'
         required: true
-        default: true
+        default: 'false'
   schedule:
     - cron: '45 19 * * *'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +27,6 @@ jobs:
           sudo apt-get install moreutils
           cd rules/auto_update
           chmod +x fwlist.py
-          chmod +x update_rules.sh
           bash update_rules.sh
 
       - name: Commit to repo
