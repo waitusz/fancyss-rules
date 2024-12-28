@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/fancyss-rules-3.0.yml'
+      - '.github/workflows/fancyss-rules.yml'
       - 'rules/auto_update/*'
   workflow_dispatch:
     inputs:
