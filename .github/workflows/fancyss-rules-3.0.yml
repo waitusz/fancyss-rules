@@ -28,7 +28,7 @@ jobs:
           cd rules/auto_update
           chmod +x fwlist.py
           chmod +x update_rules.sh
-          bash update_rules.sh
+          bash ./update_rules.sh
 
       - name: Commit to repo
         if: env.is_changed == '1' || github.event.inputs.FORCE_PUSH == 'true'
