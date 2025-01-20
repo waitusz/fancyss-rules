@@ -1,7 +1,7 @@
 [![Update Fancyss Rules](https://github.com/waitusz/fancyss-rules/actions/workflows/fancyss-rules.yml/badge.svg)](https://github.com/waitusz/fancyss-rules/actions/workflows/fancyss-rules.yml)
 [![](https://data.jsdelivr.com/v1/package/gh/waitusz/fancyss-rules/badge?style=rounded)](https://www.jsdelivr.com/package/gh/waitusz/fancyss-rules)
 
-#### 支持 [fancyss 3.0] (https://github.com/hq450/fancyss)版本
+#### 支持[fancyss 3.0](https://github.com/hq450/fancyss)版本
 ---   
 #### 每日UTC+8 3:45时自动更新规则，推荐在插件中设置每天4:00定时更新  
 ---
