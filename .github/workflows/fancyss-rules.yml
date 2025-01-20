@@ -17,17 +17,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Run update script
         run: |
-          sudo apt-get install moreutils
+          #sudo apt-get install moreutils
           cd rules/auto_update
-          chmod +x fwlist.py
-          bash update_rules.sh
+          #chmod +x fwlist.py
+          sh ./update_rules.sh
+          #bash update_rules.sh
+        shell: bash
           
       - name: Commit to repo
         if: env.is_changed == '1' || github.event.inputs.FORCE_PUSH == 'true'
