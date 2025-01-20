@@ -11,16 +11,16 @@ on:
       FORCE_PUSH:
         description: 'Force to push'
         required: true
-        default: 'true'
+        default: 'false'
   schedule:
-    - cron: '45 19 * * *'
+    - cron: '45 3 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run update script
         run: |
@@ -38,3 +38,11 @@ jobs:
           git add rules/.
           git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')"
           git push
+          
+      - name: Delete old workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          keep_minimum_runs: 7
+          retain_days: 7
