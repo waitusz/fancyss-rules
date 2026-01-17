@@ -18,8 +18,8 @@ jobs:
 
       - name: Run update script
         run: |
-          cd rules/auto_update
-          sh ./update_rules.sh
+          cd rules_ng
+          sh ./rules_ng.sh
         shell: bash
           
       - name: Commit to repo
