@@ -8,10 +8,6 @@ on:
       - 'rules_ng/*'
 
   workflow_dispatch:
-    inputs:
-      FORCE_PUSH:
-        description: 'Force to push'
-        required: false
   
   schedule:
     - cron: '30 19 * * *'
