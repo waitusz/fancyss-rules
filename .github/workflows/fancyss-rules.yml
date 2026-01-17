@@ -1,23 +1,16 @@
 name: Update Fancyss Rules 3.4.x
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - '.github/workflows/fancyss-rules.yml'
-      - 'rules_ng/*'
-
-  workflow_dispatch:
-  
   schedule:
     - cron: '30 19 * * *'
-
+  
 jobs:
   build:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Run update script
         run: |
           sudo apt-get -y install iprange moreutils
@@ -25,13 +18,13 @@ jobs:
           chmod +x update_rules.sh
           ./update_rules.sh update
 
-      - name: Commit to repo
+      - name: Commit to rules_ng
         run: |  # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
           if [ -n "$(git status -s)" ]; then
-            cd $GITHUB_WORKSPACE
+            # cd $GITHUB_WORKSPACE
             git config --local user.name "github-actions[bot]"
             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
+            git add rules_ng/.
             git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')" rules_ng/*
             git push
           else
