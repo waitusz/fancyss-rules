@@ -1,3 +1,4 @@
+
 name: Update Fancyss Rules 3.0
 
 on:
@@ -19,6 +20,8 @@ jobs:
       - name: Run update script
         run: |
           cd rules_ng
+          sudo apt install moreutils
+          #sudo apt install moreutils
           chmod +x update_rules.sh
           ./update_rules.sh
         # shell: bash
