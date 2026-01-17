@@ -1,4 +1,4 @@
-name: Update Fancyss Rules 3.4.x
+name: Update Fancyss Rules 3.3.9+
 
 on:
   schedule:
@@ -10,14 +10,13 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Run update script
         run: |
           sudo apt-get -y install iprange moreutils
           cd rules_ng
           chmod +x update_rules.sh
-          ./update_rules.sh update
+          ./update_rules.sh
 
       - name: Commit to rules_ng
         run: |  # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
