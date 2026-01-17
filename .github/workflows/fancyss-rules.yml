@@ -21,7 +21,7 @@ jobs:
         run: |
           cd rules_ng
           sudo apt install moreutils
-          #sudo apt install moreutils
+          sudo apt install iprange
           chmod +x update_rules.sh
           ./update_rules.sh
         # shell: bash
