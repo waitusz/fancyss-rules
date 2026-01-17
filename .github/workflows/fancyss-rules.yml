@@ -3,6 +3,7 @@ name: Update Fancyss Rules 3.4.x
 on:
   schedule:
     - cron: '30 19 * * *'
+  workflow_dispatch:
   
 jobs:
   build:
