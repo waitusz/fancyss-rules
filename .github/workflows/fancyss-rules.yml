@@ -24,6 +24,7 @@ jobs:
           sudo apt install iprange
           chmod +x update_rules.sh
           ./update_rules.sh
+          cd ..
         # shell: bash
           
       - name: Commit to repo
@@ -33,7 +34,7 @@ jobs:
             git config --local user.name "github-actions[bot]"
             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')" rules/*
+            git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')" rules_ng/*
             git push
           else
              echo "No modifications."
