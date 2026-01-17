@@ -19,8 +19,9 @@ jobs:
       - name: Run update script
         run: |
           cd rules_ng
-          sh ./update_rules.sh
-        shell: bash
+          chmod +x update_rules.sh
+          ./update_rules.sh
+        # shell: bash
           
       - name: Commit to repo
         run: |
