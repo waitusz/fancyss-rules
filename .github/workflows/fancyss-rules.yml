@@ -19,7 +19,7 @@ jobs:
       - name: Run update script
         run: |
           cd rules_ng
-          sh ./rules_ng.sh
+          sh ./update_rules.sh
         shell: bash
           
       - name: Commit to repo
