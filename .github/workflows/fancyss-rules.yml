@@ -1,5 +1,5 @@
 
-name: Update Fancyss Rules 3.0
+name: Update Fancyss Rules 3.4.x
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: '45 2 */2 * *'
+    - cron: '30 20 * * *'
 
 jobs:
   build:
@@ -19,16 +19,16 @@ jobs:
 
       - name: Run update script
         run: |
+          sudo apt install moreutils iprange
           cd rules_ng
-          sudo apt install moreutils
-          sudo apt install iprange
           chmod +x update_rules.sh
           ./update_rules.sh
-          cd ..
+        # cd ..
         # shell: bash
           
       - name: Commit to repo
         run: |
+          # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
           if [ -n "$(git status -s)" ]; then
             # cd $GITHUB_WORKSPACE
             git config --local user.name "github-actions[bot]"
