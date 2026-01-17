@@ -24,10 +24,9 @@ jobs:
           ./update_rules.sh
         # cd ..
         # shell: bash
-          
+
       - name: Commit to repo
-        run: |
-        # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
+        run: |       # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
           if [ -n "$(git status -s)" ]; then
             # cd $GITHUB_WORKSPACE
             git config --local user.name "github-actions[bot]"
