@@ -29,9 +29,9 @@
   },
   "adslist": {
     "name": "adslist.gz",
-    "date": "2026-01-23 03:43",
-    "md5": "85a78bf9f573a317ccb52fabf8815ede",
-    "count": "109823",
+    "date": "2026-01-25 03:35",
+    "md5": "e9d67f9a083c841333e0b59b661339e3",
+    "count": "109822",
     "source": "anti-ad",
     "url": "https://anti-ad.net/domains.txt"
   },
