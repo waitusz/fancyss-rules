@@ -7,17 +7,17 @@
   },
   "chnlist": {
     "name": "chnlist.gz",
-    "date": "2026-02-04 03:52",
-    "md5": "212160f7920ffada6a469aa34a7ab3b1",
-    "count": "114878",
+    "date": "2026-02-06 03:50",
+    "md5": "8325b1ba05262c87e45f02f81d99cac9",
+    "count": "116250",
     "note": "merged from dnsmasq-china-list"
   },
   "chnroute": {
     "name": "chnroute.txt",
-    "date": "2026-02-04 03:52",
-    "md5": "fe3f6bff47f170efcefcf8ec41d6e2ae",
-    "count": "8232",
-    "count_ip": "358497084",
+    "date": "2026-02-06 03:50",
+    "md5": "219ae5106dd5b233a08a170ead3a0031",
+    "count": "8235",
+    "count_ip": "358501692",
     "source": "merged"
   },
   "chnroute6": {
