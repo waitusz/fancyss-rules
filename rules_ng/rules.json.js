@@ -1,9 +1,9 @@
 {
   "gfwlist": {
     "name": "gfwlist.gz",
-    "date": "2026-02-09 03:37",
-    "md5": "f73803248c11acd01da212c0dfd7547a",
-    "count": "7181"
+    "date": "2026-02-12 03:58",
+    "md5": "7c457eec77c3582efcbee1b7c464ce2e",
+    "count": "6420"
   },
   "chnlist": {
     "name": "chnlist.gz",
@@ -22,9 +22,9 @@
   },
   "chnroute6": {
     "name": "chnroute6.txt",
-    "date": "2026-02-04 03:52",
-    "md5": "35d4c04373da5a4b90946f3865426633",
-    "count": "2040",
+    "date": "2026-02-12 03:58",
+    "md5": "25cdac68943e5b32c16d9cd7603e1c2c",
+    "count": "2041",
     "source": "apnic"
   },
   "adslist": {
