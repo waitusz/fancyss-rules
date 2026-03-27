@@ -1,44 +1,42 @@
-name: Update Fancyss Rules 3.0
+name: Update Fancyss Rules 3.3.9+
 
 on:
-  push:
-    branches: [ master ]
-
+  schedule:
+    - cron: '15 19 * * *'
   workflow_dispatch:
   
-  schedule:
-    - cron: '45 3 * * *'
-
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Run update script
         run: |
-          cd rules/auto_update
-          sh ./update_rules.sh
-        shell: bash
-          
-      - name: Commit to repo
-        run: |
+          sudo apt-get -y install iprange moreutils
+          cd rules_ng
+          chmod +x update_rules.sh
+          ./update_rules.sh clean
+          ./update_rules.sh
+
+      - name: Commit to rules_ng
+        run: |  # 判断是否有文件变化，如字符串$(git status -s)不为空，则提交更改，(-z "$str": 字符串为空；-n "$str": 字符串不为空)
           if [ -n "$(git status -s)" ]; then
             # cd $GITHUB_WORKSPACE
             git config --local user.name "github-actions[bot]"
             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')" rules/*
+            git add rules_ng/.
+            git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')" rules_ng/*
             git push
           else
              echo "No modifications."
           fi
           
       - name: Delete old workflow runs
-        uses: GitRML/delete-workflow-runs@main
+        uses: Mattraks/delete-workflow-runs@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 7
           retain_days: 7
