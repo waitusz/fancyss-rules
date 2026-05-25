@@ -1,37 +1,37 @@
 {
   "gfwlist": {
     "name": "gfwlist.gz",
-    "date": "2026-05-25 04:15",
-    "md5": "57408f1d0bb64af8663493dffd22a5a6",
-    "count": "6478"
+    "date": "2026-05-26 04:43",
+    "md5": "a2168a73cf600e4c2342b6def9cd8b1b",
+    "count": "6475"
   },
   "chnlist": {
     "name": "chnlist.gz",
-    "date": "2026-05-25 04:15",
+    "date": "2026-05-26 04:43",
     "md5": "66e91862486ad4daf1a111a25446c1ad",
     "count": "113209",
     "note": "merged from dnsmasq-china-list"
   },
   "chnroute": {
     "name": "chnroute.txt",
-    "date": "2026-05-25 04:15",
-    "md5": "2f73571243f597533a1e75973dfd6f44",
-    "count": "6884",
-    "count_ip": "357262264",
+    "date": "2026-05-26 04:43",
+    "md5": "7b29241fc68849389811538051ba72ae",
+    "count": "6885",
+    "count_ip": "357262776",
     "source": "merged"
   },
   "chnroute6": {
     "name": "chnroute6.txt",
-    "date": "2026-05-25 04:15",
-    "md5": "c6f70fa0dd4f6c2ce14820f96a34cffb",
-    "count": "2041",
+    "date": "2026-05-26 04:44",
+    "md5": "6e2c1eccecbccc23e64bae7371fe4df9",
+    "count": "2040",
     "source": "apnic"
   },
   "adslist": {
     "name": "adslist.gz",
-    "date": "2026-05-25 04:15",
-    "md5": "be126f9c2ce0cb7289cc7ac638ec65d3",
-    "count": "113513",
+    "date": "2026-05-26 04:43",
+    "md5": "6dc8f61938d805b3fd48607e997609c6",
+    "count": "113701",
     "source": "anti-ad",
     "url": "https://anti-ad.net/domains.txt"
   },
@@ -67,19 +67,19 @@
   },
   "apple_china": {
     "name": "apple_china.txt",
-    "date": "2026-05-25 04:15",
+    "date": "2026-05-26 04:43",
     "md5": "0a50843a1a825bce7eb12ed6572bfaa6",
     "count": "163"
   },
   "google_china": {
     "name": "google_china.txt",
-    "date": "2026-05-25 04:15",
+    "date": "2026-05-26 04:43",
     "md5": "9910b5e06dfcdb5a9be57e131dcc35d9",
     "count": "112"
   },
   "cdn_test": {
     "name": "cdn_test.txt",
-    "date": "2026-05-25 04:15",
+    "date": "2026-05-26 04:44",
     "md5": "1003972714d2265e4b0d3c3e8245519b",
     "count": "91"
   }
